@@ -1,0 +1,113 @@
+                25.Method Overriding and Property Overriding
+
+
+void main() {
+
+	var dog = Dog();
+	dog.breed = "Labrador";
+	dog.color = "Black";
+	dog.eat();
+}
+
+class Animal {
+
+	String color;
+
+	void eat() {
+		print("Animal is Eating");
+	}
+}
+
+class Dog extends Animal {      // Dog is Child class or sub class, Animal is super or parent class
+
+	String breed;
+
+	void bark() {
+		print("Bark !");
+	}
+}
+
+O/P :
+    Animal is Eating
+
+Instead of animal is Eating, if you want to print Dog is Eating.
+use method Overriding
+
+use the same class name and return type defined in the parent class in child class
+
+void main() {
+
+	var dog = Dog();
+	dog.breed = "Labrador";
+	dog.color = "Black";
+	dog.eat();
+}
+
+class Animal {
+
+	String color;
+
+	void eat() {
+		print("Animal is Eating");
+	}
+}
+
+class Dog extends Animal {      // Dog is Child class or sub class, Animal is super or parent class
+
+	String breed;
+
+	void bark() {
+		print("Bark !");
+	}
+
+    void eat() {
+		print("Dog is Eating");
+	}
+}
+
+O/P :
+    Dog is Eating
+
+
+
+use super keyword to print both the methods
+
+void main() {
+
+	var dog = Dog();
+	dog.breed = "Labrador";
+	dog.color = "Black";
+	dog.eat();
+}
+
+class Animal {
+
+	String color;
+
+	void eat() {
+		print("Animal is Eating");
+	}1
+}
+
+class Dog extends Animal {      // Dog is Child class or sub class, Animal is super or parent class
+
+	String breed;
+
+	void bark() {
+		print("Bark !");
+	}
+
+    void eat() {
+        super.eat()
+		print("Dog is Eating");
+	}
+}
+
+O/P :
+    Animal is Eating
+    Dog is Eating
+
+
+
+
+we can also define th properties in the child class to override the properties

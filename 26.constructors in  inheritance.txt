@@ -1,0 +1,121 @@
+                            26.Constructors in Inheritance
+
+
+default Constructors
+
+void main(){
+    var dog = Dog()
+}
+
+class Animal{
+    string color;
+
+    Animal(){
+        print('Animal Constructor');
+    }
+}
+
+class Dog extends Animal{
+
+    Dog(){
+        print('Dog Constructor')
+    }
+}
+
+o/p:
+    Animal Constructor
+    Dog Constructor
+
+In Inheritance by default, superclass constructor gt executes before the child class
+constructor
+
+In default constructor we don't need to call the superclass constructor
+we can also call manually using super()
+
+void main(){
+    var dog = Dog()
+}
+
+class Animal{
+    string color;
+
+    Animal(){
+        print('Animal Constructor');
+    }
+}
+
+class Dog extends Animal{
+    string breed
+    Dog():super(){
+        print('Dog Constructor')
+    }
+}
+
+o/p:
+    Animal Constructor
+    Dog Constructor
+
+////////////////////////////////////////////////
+
+Parameterised constructor
+void main(){
+    var dog = Dog('bug','brown')
+}
+
+class Animal{
+    string color;
+
+    Animal(string color){
+        print('Animal Constructor');
+        this.color = color
+    }
+}
+
+class Dog extends Animal{
+    string breed
+    Dog(string breed, string color):super(color){
+        print('Dog Constructor');
+        this.breed = breed
+    }
+}
+
+o/p:
+    Animal Constructor
+    Dog Constructor
+
+in parameterised constructor we should definitely call the superclass constructor
+with parameter
+
+/////////////////////////////////////////////////////////////////////////////////
+
+named constructor
+void main(){
+    var dog = Dog.myDogNamedConstructor()
+}
+
+class Animal{
+    string color;
+
+    Animal(string color){
+        print('Animal Constructor');
+        this.color = color
+    }
+    Animal.myAnimalNamedConstructor(){
+        print('myAnimalNamedConstructor')
+    }
+}
+
+class Dog extends Animal{
+    string breed
+    Dog(string breed, string color):super(color){
+        print('Dog Constructor');
+        this.breed = breed
+    }
+
+    Dog.myDogNamedConstructor():super.myAnimalNamedConstructor(){
+        print('myDogNamedConstructor')
+    }
+}
+o/p
+myDogNamedConstructor
+myAnimalNamedConstructor

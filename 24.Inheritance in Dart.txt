@@ -1,0 +1,119 @@
+                            24.Inheritance in Dart
+
+Inheritance :
+    inheritance is a mechanism in which one object acquires properties of its parent class Object.
+
+
+Types of inheritance
+
+Single inhertiance :
+             OBJECT
+                |
+                |
+            class  A 
+                |
+                |
+                |
+            class B
+    
+Class b Inherits the property from the class A, 
+Here class A is a parent class or Base class or super Class
+Class B is the child class or Sub Class of class A
+
+Multi Level Inheritance :
+              OBJECT
+                |
+                |
+            class  A 
+                |
+                |
+                |
+            class B
+                |
+                |
+                |
+            Class C 
+        
+Here Class C inherts from class B and Class B inherits from class A 
+Class C is the child class for both class A and Class B  
+Class B is the parent class for class C and chid class for class A 
+Class A is The Parent Class for bith class B and C 
+
+
+Hierarchial Inheritance :
+             OBJECT
+                |
+                |
+            class  A  ---------> Class C
+                |
+                |
+                |
+            class B
+
+Here class B and C inherits from the class A 
+Class A is the parent class for both  B and C  
+
+
+
+By Default every class is extended from the object, that provides some property and methods
+--> super class of any class is Object:
+    -> Provides default implementation of :
+        -> toString(), return the string respresentation of the object
+        -> hashCode Getter, returns the Hash Code of an Object
+        -> Operator ==, to compare two Objects
+
+syntax:
+class <child_className> extends <parent_className>{
+
+}
+
+Use "extends" keyword to inherit the property from the base class
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+Example :
+    void main() {
+
+	var dog = Dog();
+	dog.breed = "Labrador";
+	dog.color = "Black";
+	dog.bark();
+	dog.eat();
+
+	var cat = Cat();
+	cat.color = "White";
+	cat.age = 6;
+	cat.eat();
+	cat.meow();
+
+	var animal = Animal();
+	animal.color = "brown";
+	animal.eat();
+}
+
+class Animal {
+
+	String color;
+
+	void eat() {
+		print("Eat !");
+	}
+}
+
+class Dog extends Animal {      // Dog is Child class or sub class, Animal is super or parent class
+
+	String breed;
+
+	void bark() {
+		print("Bark !");
+	}
+}
+
+class Cat extends Animal {      // Cat is Child class or sub class, Animal is super or parent class
+
+	int age;
+
+	void meow() {
+		print("Meow !");
+	}
+}

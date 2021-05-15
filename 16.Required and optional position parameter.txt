@@ -1,0 +1,40 @@
+                    16.Required and optional Positional parameter
+
+Objectives
+    --> Required parameter
+    --> optional Positional parameter
+
+    void main(){
+        printnames('ak', 'Rk', 'sk');
+    }
+
+    printnames(string name1,string name2,string name3){
+        print(name1);
+        print(name2);
+        print(name3);
+    }
+
+o/p
+    ak
+    Rk
+    sk
+
+you can't skip the required parameters, but you can skip the optional Positional parameter []
+
+optional Positional parameter should be defined inside the [] brackets
+
+
+void main(){
+        printnames('ak');
+    }
+
+    printnames(string name1,[string name2,string name3]){
+        print(name1);
+        print(name2);
+        print(name3);
+    }
+
+    o/p 
+    ak
+    null
+    null

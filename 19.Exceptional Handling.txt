@@ -1,0 +1,55 @@
+                                    19.Exceptional Handling
+
+--> Exceptional Handling is Used to prevent Application crashes
+
+Objective :
+    --> ON clause
+    --> catch clause with exception object
+    --> catch clause with exception object and stackTrace object 
+    --> finally clause
+
+----->if you know something gone throw error? write those code in try block
+
+    try{
+        int result = 12 ~/ 0 // ~/ used to divide the integer and return th int value
+        print(result) // throw the error because 12/0 is undefined or error
+    }
+
+------> if you know the error name use the ON clause
+    try{
+        int result = 12 ~/ 0 // ~/ used to divide the integer and return th int value
+        print(result) // throw the error because 12/0 is undefined or error
+    } on IntergerDivisionByZeroException{
+        print('ON clause')
+    }
+
+O/P
+    ON clause
+
+---------> if you don't know the error/Exception name use catch block
+    try{
+        int result = 12 ~/ 0 // ~/ used to divide the integer and return th int value
+        print(result) // throw the error because 12/0 is undefined or error
+    }catch(err){
+        print('The Exception thrown is $err')
+    }
+
+-------> catch block with exception object and stackTrace... //stackTrace gives the information about, before the exception
+    try{
+        int result = 12 ~/ 0; // ~/ used to divide the integer and return th int value
+        print(result) // throw the error because 12/0 is undefined or error
+    }catch(err, stackTrace){
+        print('The Exception thrown is $err');
+        print('The stackTrace is $stackTrace')
+    }
+
+--------> finally block caught execute, if there is exception or not
+    try{
+        int result = 12 ~/ 0; // ~/ used to divide the integer and return th int value
+        print(result) // throw the error because 12/0 is undefined or error
+    }catch(err, stackTrace){
+        print('The Exception thrown is $err');
+        print('The stackTrace is $stackTrace')
+    }finally{
+        print('finally Clause');
+    }

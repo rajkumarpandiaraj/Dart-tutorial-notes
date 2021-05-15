@@ -1,0 +1,26 @@
+            5.Strings, Literals and String Interpolation
+
+    //Literals
+        10
+        12.5
+        'Hello'
+    //This are called as Literals
+    //we are assigning Literals to the variable
+    int age = 10;
+    double weight = 12.5;
+
+
+    Strings
+        string name = 'Rk';
+        string name1 = "Rk" //we can use double quotes too
+        // string message = 'Hi this is Rk' + 
+                            'How are you?' //In we don't want to use '+';
+        string message = 'Hi this is Rk'
+                            'How are you?';
+
+    string Interpolation [$ or ${}]
+    string name = "Rk";
+    print("my Name is $name ") //my Name is Rk
+    print("my name is ${name.length}") // my name is 2
+
+    print('multiplication of 2 * 2 is ${2 * 2}')

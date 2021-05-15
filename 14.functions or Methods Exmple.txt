@@ -1,0 +1,29 @@
+                    14.Functions or Methods
+
+Objectives
+    --> Function declaration
+    --> pass arg to the function
+    --> return statement
+    --> returning default value
+
+    
+Example
+    void main(){
+        findPerimeter();
+        int area = getArea(2, 2);
+        print(area) // 4 or null
+    }
+
+    void findPerimeter(){
+        int length = 4;
+        int breadth = 2;
+
+        let perimeter = 2 * {length + breadth};
+        print("the perimeter is $perimeter");
+    }
+
+    int getArea(int lenght, int breadth){
+        int area = length * breadth;
+
+        // return area;
+    }

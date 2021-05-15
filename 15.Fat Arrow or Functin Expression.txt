@@ -1,0 +1,17 @@
+                        15.Fat Arrow or Function Expression
+
+
+--> while using fat arrow there is no need for {} and return statement
+--> only one line of code should be in fat arrow expression
+
+Example :
+    
+    void main(){
+        findPerimeter();
+        int area = getArea(2, 2);
+        print(area) // 4 or null
+    }
+
+    void findPerimeter() => print('The perimeter is ${2*(4 + 3)}')
+
+    ont getArea(int length, int breadth) => length * breadth

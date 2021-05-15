@@ -1,0 +1,21 @@
+                            2.Dart Hello World 
+
+1."main()" func/method is the starting point of the dart program execution.
+    --> That main function should be type of "void"
+2."print()" prints the statement/expressin/ number
+3.Every line in the dart must be end with semiColon ";"
+
+Example :
+
+    void main(){
+        print("Hello World");
+        print("This is my first Dart App");
+        print(4 - 1); 
+        print(false);
+    }
+
+o/p
+    Hello World
+    This is my first Dart App
+    3
+    false

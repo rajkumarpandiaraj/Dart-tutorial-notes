@@ -1,0 +1,13 @@
+                    18.Optional default parameter
+
+Assigning default value to the named parameter
+
+
+Example
+
+    int findVolume(int length, {int breadth, int height =10}){
+        return length * breadth * height
+    }
+
+var result = findVolume(2, {breadth : 3}) //named parameters shouldpass with names
+print(result) //60

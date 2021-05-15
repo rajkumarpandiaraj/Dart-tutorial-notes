@@ -1,0 +1,6 @@
+                                    12.Continued statement
+
+
+continue statement skip the current iteration only
+you can use it with label like break statement
+

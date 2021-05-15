@@ -1,0 +1,151 @@
+                            22.Working With Constructor
+
+Constructor and its types :
+    --> Default Constructor
+    --> Parameterized Constructor
+    --> named Constructor
+    --> constant Constructor
+
+Default Constructor :-
+    void main(){
+       var student1 = new Student();
+       student1.id = 23
+       student1.name = "RK"
+       print(student1.id, student1.name);
+       student1.learn();
+       student1.sleep();
+
+    }
+
+
+    class Student{
+        int id;         //defaut value of instance variable is 'null'
+        string name;    //defaut value of instance variable is 'null'
+
+        Student (){ //This is a default constructor
+            print('This is Defaut Constructor')
+        }
+
+        void learn(){
+            print('${this.name} is learning')
+        }
+        void sleep(){
+            print('${this.name} is Sleeping')
+        }
+    }
+
+o/P
+    This is Default Constructor
+    23,Rk
+    Rk is learning
+    RK is Sleeping
+
+    Here Student() is the default Constructor, constructor is the line code to run while executing the class
+    we don't need to define the defaut constructor unless you don't need to write code in the constructor
+    constructor name is same as the class Name
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Parameterised Constructor :-
+    If the constructor has the parameter use the Parameterised Constructor
+
+        void main(){
+       var student1 = new Student(23, Rk);
+       print(student1.id, student1.name);
+       student1.learn();
+       student1.sleep();
+
+    }
+
+
+    class Student{
+        int id;         //defaut value of instance variable is 'null'
+        string name;    //defaut value of instance variable is 'null'
+
+        Student (int id, string name){
+            this.id = id;
+            this.name = name;
+        }
+
+        // we can avoid this by using different instance variable name lyk this
+            //     Student (_id, _name){
+            //     id = _id;
+            //     name = _name;
+            // }
+
+        //we can further trim down this code by like this
+           // Student (this.id, this.name);
+
+        void learn(){
+            print('${this.name} is learning')
+        }
+        void sleep(){
+            print('${this.name} is Sleeping')
+        }
+    }
+o/p :
+    23,Rk
+    Rk is learning
+    RK is Sleeping
+
+we Can't use both the default and Parameterised constructor at once, use either one of it
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Named Constructor
+   void main(){
+       var student1 = new Student(23, Rk);
+       print(student1.id, student1.name);
+       student1.learn();
+       student1.sleep();
+    
+        var student2 = new Student.myCustomConstructor()
+        student2.id = 43
+        student2.name = 'SK'
+        print(student2.id, student2.name);
+        student2.learn();
+        student2.sleep();
+    }
+
+
+    class Student{
+        int id;         //defaut value of instance variable is 'null'
+        string name;    //defaut value of instance variable is 'null'
+
+        Student (int id, string name){ //Parameterised Constructor
+            this.id = id;
+            this.name = name;
+        }
+
+        Student.myCustomConstructor(){
+            print('This is Custom constructor')
+        }
+
+        void learn(){
+            print('${this.name} is learning')
+        }
+        void sleep(){
+            print('${this.name} is Sleeping')
+        }
+    }
+
+
+    23,Rk
+    Rk is learning
+    RK is Sleeping
+
+    This is a Custom Constructor
+    43,SK
+    SK is learning
+    SK is Sleeping
+
+    We can use Multiple number of named constructor with default/Parameterised constructor
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+There is no real world scenario for constant constructor
+
+Summary:
+    --> propertirs of Constructors
+        --> Used to create Objects.
+        --> you can initialize Your Instance or field variable withi Constructors
+        --> Ypu Cannot have both default and Parameterised constructor at the same time
+        --> You can have as many Named constructor as you want to

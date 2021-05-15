@@ -1,0 +1,64 @@
+                            29. Static Variables and Methods
+
+
+--> Static variables are also kown as Class Variables
+--> Static methods are also kown as Class Mwthods
+
+--> Static Variables are lazilly initialized
+    --> That means, they are not initialized until they are used in program
+    --> so they consume memory ony whe they are used
+
+-->Static methods has notjing t do with class objects or instance
+    --> You cannot use this keyword within a static methods
+
+--> From a static methods
+    --> You can ONLY acess Static methoda and static Variables
+    --> you cannot access Normal instance variable and methds of the class.
+
+    // Objectives
+// 1. Static Methods and Variables
+
+void main() {
+
+	var circle1 = Circle();
+//	circle1.pi;     // 4 bytes //static variable is not allowed call using instance variable[circle1]
+
+	var circle2 = Circle();
+//	circle2.pi;     // 4 bytes
+
+	// 8 bytes      // waste of extra 4 bytes
+
+	Circle.pi;  // 4 bytes
+	Circle.pi;  // No more memory will be allocated .
+
+
+//	circle.calculateArea();
+
+//	print(Circle.pi);           // Syntax to call Static Variable
+
+//	Circle.calculateArea();     // Syntax to call Static Method
+}
+
+class Circle {
+
+	static const double pi = 3.14;
+	static int maxRadius = 5;
+
+	String color;
+
+	static void calculateArea() {
+		print("Some code to calculate area of Circle");
+//		myNormalFunction();     // Not allowed to call instance functions
+//		this.color;             // You cannot use 'this' keyword and even cannot access Instance variables
+	}
+
+	void myNormalFunction() {
+        circle.calculateArea()
+            or
+		calculateArea();
+        
+		this.color = "Red";
+		print(pi);
+		print(maxRadius);
+	}
+}

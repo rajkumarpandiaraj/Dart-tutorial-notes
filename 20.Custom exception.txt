@@ -1,0 +1,21 @@
+                            20.Custom Exception
+
+creating the own cutom exception
+
+class DepositExcepton implements Exception{
+    string errorMessage(){
+        return "You cannot enter amount less than zero"
+    }
+
+    void depositMoney(int amount){
+        if(amount < 0){
+            throw new DepositExcepton()
+        }
+    }
+}
+
+try{
+    depositMoney(-200)
+}catch(err){
+    print(err.errorMessage)
+}

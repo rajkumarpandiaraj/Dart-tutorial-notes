@@ -1,0 +1,17 @@
+                        9. Switch Case
+
+Switch case is only applicable for only int and string
+
+string grade = 'a'
+
+switch(grade){ switch condition as int or string, not double or boolean
+    case 'a' :
+        print('Excellecent Grade');
+        break;
+    case 'b' :
+        print('Very Good Grade');
+        break;
+    default :
+        print('Failed');
+        break;
+}

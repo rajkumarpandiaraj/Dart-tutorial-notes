@@ -1,0 +1,42 @@
+                                13.Function or Methods
+
+
+--> Introduction to Functions
+--> Syntax and properties of a function
+--> Function as Expression
+--> Different type of function parameter
+        --> Required Parameters
+        --> Optional Parameters
+            --> Optional Positional parameters
+            --> Optional Named Parameters
+            --> Optional default paramters
+
+Function :
+    Function a collection of statement grouped together to perform an Operation
+
+syntax :
+    returnType functionNmae(required parameters){
+        function body
+    }
+
+    here returnType is optional, but it is recommended to specify return type
+
+Example :
+    int findArea(int length, int breadth){
+        return length * breadth;
+    }
+
+    here we are returning number so we are using int return type
+
+    if you are returning nothing use void return type
+
+    void  findArea(int length, int breadth){
+        print(length * breadth);
+    }
+
+Properties : 
+    --> Function in Dart are Objects
+        --> So functions can be assigned to a variable or passed as parameter to the other functions.
+    --> All functions in Dart return a value
+        --> if there is no return statement or value in function, by defsult it return null
+    --> Specifying return type is optional but is recommended as per coding convention

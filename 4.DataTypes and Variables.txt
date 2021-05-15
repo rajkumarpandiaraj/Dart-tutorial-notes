@@ -1,0 +1,35 @@
+                            4.Data Types and Variables
+
+Built-in Data Types :
+    Dart has special support for these data types :
+        1.Numbers
+            --> int 
+            --> double
+        2.Strings
+        3.Booleans
+        4.Lists(also known as Arrays)
+        5.Maps
+        6.Runs (for expressing unicode in a String)
+        7.symbols
+
+    Now we are going to see about number,string and Booleans
+
+variable declaration
+
+    DataType<space>VariableName = value
+
+Example 
+    int age = 10
+    double weight = 1.2
+    string name = 'Rk'
+    bool isAlive = false
+
+we can use var keyword as dataType, it refers the dataType based on the value
+
+Example
+    var age = 10
+    var weight = 1.2
+    var name = 'RK'
+    var isAlive = false
+
+    

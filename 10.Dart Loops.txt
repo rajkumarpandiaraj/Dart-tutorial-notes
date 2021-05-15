@@ -1,0 +1,41 @@
+                            10.Dart Loops
+
+In Dart, there are
+    --> for loop / for in
+    --> while loop
+    --> dowhile loop
+
+
+printing Hello four loops in different Loops
+
+--> for loop :-
+    for(int i= 0; i < 4 ; i++){
+        print('Hello');
+    }
+
+--> for in 
+        list months = ['jan','feb','mar]
+        for(string month in months){
+            print(month)
+        }
+
+--> while()
+        int i = 0;
+        while(i < 4){
+            print('Hello');
+            i++
+        }
+
+--> dowhile loop
+        int i = 0;
+        do{
+            print('Hello');
+            i++;
+        }while(i < 4);
+
+
+There are two ytypes of loop,
+    definite and indefinite loop 
+
+for loop is a definite loop
+and while and dowhile loops are indefinite loop 

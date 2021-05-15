@@ -1,0 +1,44 @@
+                    33.List or Array
+
+List :
+    --> In Dart Array is known as List
+    --> Orderd Collection
+        --> Elements are ordered in Sequence.
+
+
+There are two types of List
+    --> FixedLength List
+        -> Length Once defined cannot be changed
+    --> Growable List
+        -> Length i dynamic
+
+syntax :
+    declaration
+    List<type> variable_name = List(<length_of_list>)
+
+Example :
+    void main(){
+        List<int> numberList = List(5);
+        //initialy numberList hold null value in all the Elements
+
+        numberList[0] = 22
+        numberList[3] = 44
+
+    //To print the elements in numberList
+    for(in element in numberList){
+        print(element);
+    }
+
+    numberList.forEach((int element) => print(element);0)
+
+    for(int i = 0; i < numberList.length; i++){
+        print(numberList[i]);
+    }
+
+// These methods are only work in Growable List
+    numberList.remove(22)
+    numberList.add(25)
+    numberList.removeAt(3)
+    numberList.clear()
+
+    }

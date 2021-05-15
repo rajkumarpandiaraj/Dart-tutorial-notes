@@ -1,0 +1,63 @@
+                21.Object Oriented Dart
+
+Object Oriented Dart covers
+        --> How to create class and Objects
+        --> What are
+            -> Instance Variable or Field Variable
+            -> Defining Function in a class
+            -> reference Variable
+        --> Constructors
+            -> Defaut constructor
+            -> Parameterised constructor
+            -> Named constructor
+            -> Constant Constructor
+
+Now we are going to see 
+    How to create Class and Object
+    What is Instance or firld Variable and reference Variable
+
+
+
+Syntax to create a class :
+    class <Class_name>{
+        properties //propertirs are called as Instance or Field Variable
+
+        Methods(){
+
+        }
+    }
+
+syntax to create object from a class
+
+    var <reference Variable> = new <class_name>() //new keyword in optional
+
+Example :
+    Now we are going to create student class and student object
+
+    void main(){
+       var student1 = new Student();
+       student1.id = 23
+       student1.name = "RK"
+       print(student1.id, student1.name);
+       student1.learn();
+       student1.sleep();
+
+       var student2 = new Student();
+       student2.id = 26
+       student2.name = "SK"
+       print(student2.id, student2.name);
+       student2.learn();
+       student2.sleep();
+    }
+
+    class Student{
+        int id;         //defaut value of instance variable is 'null'
+        string name;    //defaut value of instance variable is 'null'
+
+        void learn(){
+            print('${this.name} is learning')
+        }
+        void sleep(){
+            print('${this.name} is Sleeping')
+        }
+    }

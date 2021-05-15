@@ -1,0 +1,12 @@
+                3.Comments in Dart //
+
+"//" is used to create the single line Comments
+"/**/" is used to create multiple lines of comments
+
+void main(){
+    //This is my first line of code
+    print("Hello World") 
+    
+    /*Here we can give the
+    multiple lines of comment*/
+}
